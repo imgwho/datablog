@@ -30,8 +30,8 @@ params:
     favicon:
 
     footer:
-        since: 2020
-        customText:
+        since: 2022
+        customText: Copyright © 2022 淡月清云
 
     dateFormat:
         published: Jan 02, 2006
