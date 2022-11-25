@@ -1,1 +1,1 @@
-# this is my blog of imgwho
+# this is my blog
