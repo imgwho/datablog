@@ -56,7 +56,7 @@ sudo /opt/tableau/tableau_server/packages/scripts.<version>/initialize-tsm --acc
 
 1. 使用 TSM Web 界面或命令激活 Tableau Server:
 
-- Web 界面:访问 https://hostname:8850
+- Web 界面:访问 <https://hostname:8850>
 - 命令行:
 
 ```
@@ -127,32 +127,32 @@ tsm topology nodes get-bootstrap-file --file /tmp/bootstrap.json
 
 ### 领域 1：连接到数据并准备数据
 
-**1.1 用户体验 **
+**1.1 用户体验**
 
 - 1.1.1 UI
 - 1.1.2 导航
 
-**1.2 拓扑 **
+**1.2 拓扑**
 
 - 1.2.1 确定客户端组件
 - 1.2.2 确定服务器组件
 - 1.2.3 说明二者如何配合工作
 
-**1.3 版本 **
+**1.3 版本**
 
 - 1.3.1 了解：
   - 1.3.1.1 如何确定 Tableau Server 的当前版本
   - 1.3.1.2 从何处获取最新版本的 Tableau Server
   - 1.3.1.3 在何处查看 Tableau Server 的版本说明
 
-**1.4 最低硬件要求 **
+**1.4 最低硬件要求**
 
 - 1.4.1 了解：
   - 1.4.1.1 RAM 要求
   - 1.4.1.2 CPU 要求
   - 1.4.1.3 硬盘要求
 
-**1.5 软件要求 **
+**1.5 软件要求**
 
 - 1.5.1 列出支持的操作系统
 - 1.5.2 了解：
@@ -165,13 +165,13 @@ tsm topology nodes get-bootstrap-file --file /tmp/bootstrap.json
   - 1.5.5 解释专用服务器的用途和好处
   - 1.5.6 确定云端运行的注意事项
 
-**1.6 许可 **
+**1.6 许可**
 
 - 1.6.1 了解基于用户能力的授权
 - 1.6.1.1 说明不同的许可证类型
 - 1.6.1.2 说明许可证类型如何映射到站点角色
 
-**1.7 Server 进程 **
+**1.7 Server 进程**
 
 - 1.7.1 说明每个 Tableau 服务管理器和 Tableau Server 进程
 - 1.7.2 了解：
@@ -192,14 +192,14 @@ tsm topology nodes get-bootstrap-file --file /tmp/bootstrap.json
   - 1.8.3.2 数据提取与实时连接
 - 1.8.4 说明已发布数据源的优势
 
-**1.9 基础结构网络 **
+**1.9 基础结构网络**
 
 - 1.9.1 了解网络延迟含义
 - 1.9.2 说明动态 IP 寻址的风险
 
 ### 领域 2：安装和配置
 
-**2.1 安装 **
+**2.1 安装**
 
 - 2.1.1 了解安装步骤和选项
 
@@ -216,7 +216,7 @@ tsm topology nodes get-bootstrap-file --file /tmp/bootstrap.json
 - 2.1.5 了解在单一计算机环境中安装 Tableau 的最佳做法
 - 2.1.6 了解静默安装
 
-**2.2 Tableau Server 配置 **
+**2.2 Tableau Server 配置**
 
 - 2.2.1 了解缓存设置
 - 2.2.2 了解如何：
@@ -233,14 +233,14 @@ tsm topology nodes get-bootstrap-file --file /tmp/bootstrap.json
   - 2.2.3.6 分组和用户配置选项
 - 2.2.4 了解谁可以添加用户
 
-**2.3 添加用户 **
+**2.3 添加用户**
 
 - 2.3.1 许可证类型和站点角色
 - 2.3.2 管理员级别
 - 2.3.3 发布者级别
 - 2.3.4 通过 Active Directory 或本地导入
 
-**2.4 安全性 **
+**2.4 安全性**
 
 - 2.4.1 描述以下项的安全配置：
   - 2.4.1.1 站点级别
@@ -250,7 +250,7 @@ tsm topology nodes get-bootstrap-file --file /tmp/bootstrap.json
   - 2.4.1.5 数据源级别
   - 2.4.1.6 工作簿级别
 
-**2.5 权限 **
+**2.5 权限**
 
 - 2.5.1 了解：
   - 2.5.1.1 系统权限组成
@@ -260,7 +260,7 @@ tsm topology nodes get-bootstrap-file --file /tmp/bootstrap.json
 
 ### 领域 3：管理
 
-**3.1 了解如何： **
+**3.1 了解如何：**
 
 - 3.1.1 维护数据连接
 - 3.1.2 创建计划
@@ -278,7 +278,7 @@ tsm topology nodes get-bootstrap-file --file /tmp/bootstrap.json
 - 3.1.14 监视 Desktop 许可证使用
 - 3.1.15 管理工作簿和数据源修订历史记录
 
-**3.2 描述如何： **
+**3.2 描述如何：**
 
 - 3.2.1 以多种方法查看服务器状态
 - 3.2.2 查看电子邮件通知
@@ -289,9 +289,9 @@ tsm topology nodes get-bootstrap-file --file /tmp/bootstrap.json
 - 3.2.7 创建嵌套项目
 - 3.2.8 使用站点和站点管理选项
 
-**3.3 将最终用户能力与系统管理员能力进行对比 **
+**3.3 将最终用户能力与系统管理员能力进行对比**
 
-**3.4 最终用户能力 **
+**3.4 最终用户能力**
 
 **3.5 了解：**
 
@@ -308,7 +308,7 @@ tsm topology nodes get-bootstrap-file --file /tmp/bootstrap.json
 
 **4.1 了解浏览器中第三方 cookie 的要求**
 
-**4.2 了解如何： **
+**4.2 了解如何：**
 
 - 4.2.1 重置 Tableau 用户或 Tableau 运行身份服务帐户的密码
 - 4.2.2 打包日志文件以进行报告
@@ -319,15 +319,12 @@ tsm topology nodes get-bootstrap-file --file /tmp/bootstrap.json
 
 ### 领域 5：迁移和升级
 
-**5.1 了解升级过程 **
+**5.1 了解升级过程**
 
-**5.2 说明执行干净重装的方法及原因 **
+**5.2 说明执行干净重装的方法及原因**
 
-**5.3 描述如何迁移到不同的硬件 **
+**5.3 描述如何迁移到不同的硬件**
 
 **5.4 了解向后兼容性**
 
-
 <Comment />
-
-
