@@ -32,11 +32,71 @@ hostnamectl set-hostname <新主机名>
 
 ## 二、安装 Tableau Server 软件包
 
-<!-- ![](static/JAX2bDREtoTVhQxbSCxcDAIUnKf.png) -->
+![](./JAX2bDREtoTVhQxbSCxcDAIUnKf.png)
 
 1. 下载适用于 Linux 的 Tableau Server 安装包，解压缩到安装目录，例如:
 
+```
+tar -xvf tableau-server-<version>.x86_64.rpm
+```
 
+1. 运行安装脚本:
+
+```
+sudo ./initialize-tsm --accepteula
+```
+
+## 三、初始化和激活 Tableau Server
+
+1. 初始化 Tableau 服务管理器(TSM):
+
+```
+sudo /opt/tableau/tableau_server/packages/scripts.<version>/initialize-tsm --accepteula
+```
+
+1. 使用 TSM Web 界面或命令激活 Tableau Server:
+
+- Web 界面:访问 https://hostname:8850
+- 命令行:
+
+```
+tsm licenses activate -k <product-key>
+```
+
+1. 注册 Tableau Server:
+
+```
+tsm register --file /path/to/registration_file.json
+```
+
+## 四、配置初始设置
+
+1. 配置身份存储、网关端口等必要设置，可以使用 TSM Web 界面或命令行:
+
+```
+tsm configuration set -k wgserver.authenticate -v local
+tsm configuration set -k gateway.public.port -v 80
+```
+
+1. 创建初始管理员账号:
+
+```
+tabcmd initialuser --server http://<hostname> --username "<admin-username>" --password "<password>"
+```
+
+## 五、应用配置并启动服务器
+
+1. 应用 pending 状态的配置并重启服务器:
+
+```
+tsm pending-changes apply
+```
+
+1. 初始化并启动 Tableau Server:
+
+```
+tsm initialize --start-server --request-timeout 1800
+```
 
 ## 六、验证安装
 
