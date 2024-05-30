@@ -31,8 +31,8 @@ export default defineConfig({
             provider: 'local',
         },
         //outline:[2,3],
-        outlineTitle: '文章摘要',
-        socialLinks: [{ icon: 'github', link: 'https://github.com/airene/vitepress-blog-pure' }]
+        outlineTitle: '文章摘要'
+        // socialLinks: [{ icon: 'github', link: 'https://github.com/airene/vitepress-blog-pure' }]
     },
     srcExclude: ['README.md'], // exclude the README.md , needn't to compiler
 
