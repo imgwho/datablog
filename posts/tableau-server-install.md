@@ -34,7 +34,7 @@ hostnamectl set-hostname <新主机名>
 
 ## 二、安装 Tableau Server 软件包
 
-![](static/JAX2bDREtoTVhQxbSCxcDAIUnKf.png)
+![](./JAX2bDREtoTVhQxbSCxcDAIUnKf.png)
 
 1. 下载适用于 Linux 的 Tableau Server 安装包，解压缩到安装目录，例如:
 
