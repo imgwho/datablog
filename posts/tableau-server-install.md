@@ -34,7 +34,7 @@ hostnamectl set-hostname <新主机名>
 
 ## 二、安装 Tableau Server 软件包
 
-<!-- ![an image](./JAX2bDREtoTVhQxbSCxcDAIUnKf.png) -->
+![an image](./JAX2bDREtoTVhQxbSCxcDAIUnKf.png)
 
 1. 下载适用于 Linux 的 Tableau Server 安装包，解压缩到安装目录，例如:
 
@@ -328,3 +328,6 @@ tsm topology nodes get-bootstrap-file --file /tmp/bootstrap.json
 **5.3 描述如何迁移到不同的硬件 **
 
 **5.4 了解向后兼容性**
+
+
+<Comment />
