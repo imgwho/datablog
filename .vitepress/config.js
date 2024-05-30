@@ -20,15 +20,15 @@ export default defineConfig({
             issueTerm: 'pathname'
         },
         nav: [
-            { text: 'Home', link: '/' },
-            { text: 'Category', link: '/pages/category' },
-            { text: 'Archives', link: '/pages/archives' },
-            { text: 'Tags', link: '/pages/tags' },
-            { text: 'About', link: '/pages/about' }
+            { text: '首页', link: '/' },
+            { text: '目录', link: '/pages/category' },
+            { text: '总览', link: '/pages/archives' },
+            { text: '标签', link: '/pages/tags' },
+            { text: '关于', link: '/pages/about' }
             // { text: 'Airene', link: 'http://airene.net' }  -- External link test
         ],
         search: {
-            provider: 'local',
+            // provider: 'local',
         },
         //outline:[2,3],
         outlineTitle: '文章摘要'
