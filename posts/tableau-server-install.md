@@ -1,5 +1,5 @@
 ---
-date: 2022-06-30
+date: 2024-05-30
 title: tableau server 安装
 # category: 主题
 tags:
