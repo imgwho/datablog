@@ -1,10 +1,10 @@
 ---
-date: 2024-05-30
+date: 2024-06-01
 title: tableau server 安装
 # category: 主题
 tags:
 - tableau server
-description: tableau server 安装
+description: 本文主要介绍Tableau server 安装的关键步骤核注意事项等
 ---
 # Tableau server 安装
 
