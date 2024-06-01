@@ -29,21 +29,33 @@ hostnamectl set-hostname <新主机名>
 ```
 
 - 创建数据目录，确保运行 Tableau Server 进程的用户对相应目录有读写权限
+```
+sudo mkdir -p /opt/tableau/tableau_server
+sudo mkdir /var/opt/tableau/tableau_server/data
+sudo chown -R tableau /opt/tableau/tableau_server /var/opt/tableau/tableau_server
+```
 
 ## 二、安装 Tableau Server 软件包
 
-![](./JAX2bDREtoTVhQxbSCxcDAIUnKf.png)
+点进目前官网发现有以下大版本：2023.3 2023.1 2022.3 2022.1 2021.4 2021.3 2021.2  [https://www.tableau.com/support/releases/server](https://www.tableau.com/support/releases/server)  
+点击需要的版本找到下载地址（2022.1.23为例）
+[https://www.tableau.com/support/releases/server/2022.1.23#esdalt](https://www.tableau.com/support/releases/server/2022.1.23#esdalt)  
+这里可以看到2022.1.23的linux安装包下载地址是
+[https://downloads.tableau.com/esdalt/2022.1.23/tableau-server-2022-1-23.x86_64.rpm](https://downloads.tableau.com/esdalt/2022.1.23/tableau-server-2022-1-23.x86_64.rpm)，在linux一般可以用wget下载
+![alt text](image.png)
 
-1. 下载适用于 Linux 的 Tableau Server 安装包，解压缩到安装目录，例如:
+<!-- ![](./JAX2bDREtoTVhQxbSCxcDAIUnKf.png) -->
+
+1. 下载适用于 Linux 的 Tableau Server 安装包:
 
 ```
-tar -xvf tableau-server-<version>.x86_64.rpm
+wget https://downloads.tableau.com/esdalt/2022.1.23/tableau-server-2022-1-23.x86_64.rpm
 ```
 
-1. 运行安装脚本:
+2. 运行安装脚本:
 
 ```
-sudo ./initialize-tsm --accepteula
+sudo yum install tableau-server-2022-1-23.x86_64.rpm -y
 ```
 
 ## 三、初始化和激活 Tableau Server
@@ -54,7 +66,7 @@ sudo ./initialize-tsm --accepteula
 sudo /opt/tableau/tableau_server/packages/scripts.<version>/initialize-tsm --accepteula
 ```
 
-1. 使用 TSM Web 界面或命令激活 Tableau Server:
+2. 安装成功后，推荐使用 TSM Web 界面，或用命令激活 Tableau Server:
 
 - Web 界面:访问 <https://hostname:8850>
 - 命令行:
@@ -63,7 +75,7 @@ sudo /opt/tableau/tableau_server/packages/scripts.<version>/initialize-tsm --acc
 tsm licenses activate -k <product-key>
 ```
 
-1. 注册 Tableau Server:
+3. 注册 Tableau Server:
 
 ```
 tsm register --file /path/to/registration_file.json
@@ -78,7 +90,7 @@ tsm configuration set -k wgserver.authenticate -v local
 tsm configuration set -k gateway.public.port -v 80
 ```
 
-1. 创建初始管理员账号:
+2. 创建初始管理员账号:
 
 ```
 tabcmd initialuser --server http://<hostname> --username "<admin-username>" --password "<password>"
@@ -92,7 +104,7 @@ tabcmd initialuser --server http://<hostname> --username "<admin-username>" --pa
 tsm pending-changes apply
 ```
 
-1. 初始化并启动 Tableau Server:
+2. 初始化并启动 Tableau Server:
 
 ```
 tsm initialize --start-server --request-timeout 1800
@@ -107,17 +119,6 @@ tsm initialize --start-server --request-timeout 1800
 tsm status -v
 ```
 
-## 七、其他配置
-
-1. 生成引导文件以进行多节点部署:
-
-```
-tsm topology nodes get-bootstrap-file --file /tmp/bootstrap.json
-```
-
-1. 根据需要配置身份认证、数据源、网络代理、SMTP 等各项设置。
-2. 执行安全加固，如:禁用未使用的服务、配置 SSL/TLS、设置会话生命周期等。
-3. 定期检查 Tableau Server 的运行状态，确保及时更新到最新版本并打上必要的安全补丁。
 
 # 考试指南 部分
 
