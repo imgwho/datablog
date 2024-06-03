@@ -1,16 +1,16 @@
 ---
 date: 2020-09-09
-title: Tableau Server 安装实操(2022.1为例)
+title: 使用tableau画欢乐图(joy plot)
 tags:
   - tableau
-  - server
-description: 摘要：本文主要介绍Tableau server 安装的关键步骤和注意事项等。
+  - dataviz-tips
+description: 摘要：如何用tableau画joy plot？
 ---
 
 
 # 原文翻译
 
-主要翻译自 [https://www.flerlagetwins.com/2018/05/joy-plot.html#](https://www.flerlagetwins.com/2018/05/joy-plot.html#)<br />（感谢西南小组tableau交流问答群刘瑞协助）<br />语雀链接 [https://www.yuque.com/docs/share/9b132b13-38d1-4073-aa6b-9ea9193f808a?#](https://www.yuque.com/docs/share/9b132b13-38d1-4073-aa6b-9ea9193f808a?%23) 《使用tableau画欢乐图（joy plot）》
+主要翻译自 [https://www.flerlagetwins.com/2018/05/joy-plot.html#](https://www.flerlagetwins.com/2018/05/joy-plot.html#)<br />（感谢西南小组tableau交流问答群刘瑞协助）<br />
 
 ## 模板
 
@@ -129,3 +129,6 @@ END
 ### Spacing
 
 调整间距<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/93504/1599471647568-94a5bd1a-851c-4980-940a-47f609e5aaf6.png#align=left&display=inline&height=292&originHeight=292&originWidth=572&size=17785&status=done&style=none&width=572)
+
+
+<Comment />

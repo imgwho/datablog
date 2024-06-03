@@ -2,8 +2,8 @@
 date: 2024-06-01
 title: Tableau Server 安装实操(2022.1为例)
 tags:
-  - tableau
-  - server
+  - tableau server
+  - linux
 description: 摘要：本文主要介绍Tableau server 安装的关键步骤和注意事项等。
 ---
 # Tableau server 安装
