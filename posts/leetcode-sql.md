@@ -1,6 +1,6 @@
 ---
 date: 2020-05-05
-title: SQL学习笔记
+title: leetcode-SQL学习笔记
 tags:
   - tableau
   - dataviz-tips
