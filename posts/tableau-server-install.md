@@ -182,7 +182,12 @@ tsm status -v
 
 如果用root安装了Tableau server，在后面的初始化会出现报错
 ```
-User 'root' has been selected as the user to add to the TSM authorized group, but TSM does not allow root as a TSM-authorized user. You must either re-run this script using 'sudo' while logged in as a normal user instead of root (most common case), rerun this script with the '-a username' option to select a user other than root to add to the group, or the '-g' flag to disable group addition completely and add appropriate users to the group yourself. Canceling.
+User 'root' has been selected as the user to add to the TSM authorized group, but
+TSM does not allow root as a TSM-authorized user. You must either re-run this
+script using 'sudo' while logged in as a normal user instead of root (most common
+case), rerun this script with the '-a username' option to select a user other than
+root to add to the group, or the '-g' flag to disable group addition completely
+and add appropriate users to the group yourself. Canceling.
 ```
 
 可以用下面的命令完全卸载Tableau Server
