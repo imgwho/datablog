@@ -40,7 +40,8 @@ su - tabadmin
 这里可以看到2022.1.23的linux安装包下载地址是
 [https://downloads.tableau.com/esdalt/2022.1.23/tableau-server-2022-1-23.x86_64.rpm](https://downloads.tableau.com/esdalt/2022.1.23/tableau-server-2022-1-23.x86_64.rpm)，一般用wget下载  
 
-![下载链接页面](./1.png "Magic Gardens")
+![图 0](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog%2F8f87792d7c92309cc00bfa0555933b3debda5f65facc273421f65c385ab18c52.webp)  
+
 
 1. 下载适用于 Linux 的 Tableau Server 安装包
 ```
@@ -161,7 +162,8 @@ path-to-file.json:
 }
 ```
 对应TSM Web界面的设置页面，身份存储和网关端口  
-![下载链接页面](./2.png "Magic Gardens")
+![图 1](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog%2F0481a0852d7fb1a60c4a3945fc34ba759ebd95f31960f1ffb5e8b5de4a696752.webp)  
+
 
 1. 创建初始管理员账号
 ```
