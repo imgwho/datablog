@@ -2,8 +2,7 @@
 date: 2020-05-05
 title: leetcode-SQL学习笔记
 tags:
-  - tableau
-  - dataviz-tips
+  - SQL
 description: 摘要：本文主要介绍 leetcode-SQL 学习过程的关键知识等。
 ---
 

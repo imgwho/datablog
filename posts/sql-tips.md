@@ -2,8 +2,7 @@
 date: 2020-07-01
 title: SQL学习笔记
 tags:
-  - tableau
-  - dataviz-tips
+  - SQL
 description: 摘要：本文主要介绍 SQL 学习过程的关键知识等。
 ---
 
