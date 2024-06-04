@@ -20,7 +20,7 @@ export default defineConfig({
             issueTerm: 'pathname'
         },
         nav: [
-            { text: '首页', link: '/' },
+            // { text: '首页', link: '/' },
             // { text: '目录', link: '/pages/category' },
             { text: '总览', link: '/pages/archives' },
             { text: '标签', link: '/pages/tags' },
