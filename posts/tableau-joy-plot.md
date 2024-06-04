@@ -36,7 +36,12 @@ Sort表为您提供了一种简单的方法来为您正在绘制的维度的成�
 
 值（value）-您的汇总值。
 
-每个绘图点将有一条记录。下面是一些样本数据的工作表的样子。<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/93504/1598968968586-29c1cc4b-d6c4-494a-8a8c-b08b1f76a6b6.png#align=left&display=inline&height=844&originHeight=844&originWidth=831&size=87419&status=done&style=none&width=831)<br />[Joy Plot Template (With Dates on Axis)](https://public.tableau.com/views/JoyPlotTemplateWithDatesonAxis/Dashboard?:embed=y&:embed_code_version=3&:loadOrderID=0&:display_count=y&:origin=viz_share_link)
+每个绘图点将有一条记录。下面是一些样本数据的工作表的样子。<br />
+
+![图 2](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/c9e28b5f077d5638a2529063e18a9ef49fb69f5acfe54e2577f4cb7048358839.png)  
+
+
+
 
 
 ## 其他说明
