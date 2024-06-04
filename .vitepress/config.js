@@ -5,6 +5,7 @@ import { getPosts } from './theme/serverUtils'
 const pageSize = 10
 
 export default defineConfig({
+    lang: 'zh-CN',
     title: '淡月清云的数据世界',
     base: '/',
     cacheDir: './node_modules/vitepress_cache',
