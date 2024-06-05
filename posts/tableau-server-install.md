@@ -165,12 +165,45 @@ path-to-file.json:
 ![图 1](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog%2F0481a0852d7fb1a60c4a3945fc34ba759ebd95f31960f1ffb5e8b5de4a696752.webp)  
 
 
-1. 创建初始管理员账号
+3. 创建初始管理员账号
 ```
 tabcmd initialuser --server http://<hostname> --username "<admin-username>" --password "<password>"
 
 tabcmd initialuser --username brucegavin --server http://localhost #这种方式避免密码暴露
 ```
+
+4. 安装PostgreSQL  
+从驱动程序下载页面(https://www.tableau.com/zh-cn/support/drivers)下载 PostgreSQL 驱动程序。  
+将 .jar 文件复制到此文件夹（您可能必须手动创建）： /opt/tableau/tableau_driver/jdbc。  
+重新启动 TSM：tsm restart
+
+5. 配置防火墙  
+- 打开一个 bash shell 并运行以下 TSM 命令来检索 tabadmincontroller 端口的端口号：
+```
+tsm topology list-ports
+```
+记下 tabadmincontroller 端口。默认情况下，此端口为 8850。
+
+- 启动 firewalld：
+```
+sudo systemctl start firewalld
+```
+- 验证默认区域是否是高安全性区域，如 public。如果不是，建议将其更改为高安全性区域。
+```
+sudo firewall-cmd --get-default-zone
+sudo firewall-cmd --set-default-zone=public
+```
+- 针对 gateway 端口和 tabadmincontroller 端口添加端口。在以下示例中，我们使用默认端口（80 和 8850）。
+```
+sudo firewall-cmd --permanent --add-port=80/tcp
+sudo firewall-cmd --permanent --add-port=8850/tcp
+```
+- 重新加载防火墙并验证设置。
+```
+sudo firewall-cmd --reload
+sudo firewall-cmd --list-all
+```
+
 
 ## 五、验证安装
 
@@ -181,7 +214,7 @@ tsm status -v
 ```
 
 ## 六、其他
-
+### 不能用root安装
 如果用root安装了Tableau server，在后面的初始化会出现报错
 ```
 User 'root' has been selected as the user to add to the TSM authorized group, but
@@ -191,22 +224,31 @@ case), rerun this script with the '-a username' option to select a user other th
 root to add to the group, or the '-g' flag to disable group addition completely
 and add appropriate users to the group yourself. Canceling.
 ```
-
+### 卸载
 可以用下面的命令完全卸载Tableau Server
 ```
 sudo /opt/tableau/tableau_server/packages/scripts.<version_code>/tableau-server-obliterate -a -y -y -y -l
 ```
+卸载的选项：  
+-y 必需。是，从这台计算机上删除Tableau服务器。必须指定三次才能确认。 
 
+-l 可选。删除许可文件和数据。此命令将尝试在删除之前停用许可证许可数据。许可证需要访问Internet失活。不支持脱机停用。要在删除Tableau Server之前停用许可证，运行此脚本之前，请运行tsm licenses deactivate。  
+
+-k 可选。不要将备份复制到logs_temp目录。  
+
+-g 可选。不要将日志复制到logs_temp目录。
+
+-a 可选。不要将任何内容复制到logs_temp目录中。	  
+
+### 升级
 升级的话需要先停止tsm，再运行升级脚本，试用版本不能用这个脚本直接升级
 ```
 tsm stop
-
 sudo /opt/tableau/tableau_server/packages/scripts.<version_code>/upgrade-tsm --accepteula
-
 tsm start
 ```
-
-备份和还原数据
+### 备份和还原数据
+备份可以备份服务器上的数据和服务器设置
 ```
 (/var/opt/tableau/tableau_server/data/tabsvc/files/backups/ts_backup-2024-06-03.tsbak, #数据的备份文件路径
 /home/tabadmin/tss_backup.json) #设置的备份文件路径
@@ -218,6 +260,12 @@ tsm settings import -f <filename>.json
 tsm pending-changes apply
 tsm restart
 ```
+
+### 待补充
+  - [❓] 配置 SMTP 设置
+  - [❓] TSM 中的文件和权限
+  - [❓] 配置数据缓存
+  - [❓] 系统用户和 sudo 权限
 
 
 <Comment />
