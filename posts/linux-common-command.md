@@ -11,51 +11,52 @@ description: 摘要：本文主要介绍Linux上比较常用的命令及用法�
 最近在使用Linux的时候用到很多命令，熟练掌握这些会让Linux的操作事半功倍，在这里做一些主要的纪录。  
 
 # 概览
-ssh - 用于远程登录到其他主机。
-scp - 用于在不同主机之间安全地复制文件。
-cd - 用于改变当前工作目录。
-pwd - 用于显示当前工作目录的完整路径。
-mv - 用于移动或重命名文件和目录。
-chmod - 用于管理文件和目录的权限。
-passwd - 用于修改用户密码。
-usermod - 用于修改用户账户的属性。
-df - 用于显示文件系统的磁盘空间使用情况。
-netstat - 用于显示网络连接、路由表和网络接口信息。
-vi - 用于编辑文本文件。
-chgrp - 用于修改文件或目录的所属组。
-chown - 用于修改文件或目录的所有者。
-du - 用于估计文件或目录的磁盘使用空间。
-ps - 用于显示当前进程的状态。
-top - 用于实时显示系统中运行的进程及其资源使用情况。
-grep - 用于在文件中搜索指定的字符串。
-cat - 用于连接文件并在标准输出上显示。
-less - 用于分页查看文件内容。
-tail - 用于显示文件的末尾部分。
-ip - 用于显示或管理路由、网络设备、接口和隧道。
-ifconfig - 用于配置网络接口。
-ping - 用于测试与另一台主机的网络连接。
-traceroute - 用于追踪数据包到达目标主机所经过的路由。
-crontab - 用于创建、编辑或删除定时任务。
-tar - 用于归档文件。
-gzip - 用于压缩或解压缩文件。
-systemctl - 用于管理systemd系统和服务。
-service - 用于运行System V init脚本。
-firewall-cmd - 用于管理firewalld防火墙。
-iptables - 用于配置Linux内核防火墙。
-lsblk - 用于列出所有可用的块设备。
-hostnamectl - 用于查询或更改系统主机名。
-initialize-tsm - 用于初始化IBM Tivoli Storage Manager (TSM)。
-cp - 用于复制文件和目录。
-export - 用于设置环境变量。
-openssl - 用于生成和管理密钥、证书等密码学相关的内容。
-yum - 用于从yum存储库安装、更新、删除软件包。
-pip - 用于安装和管理Python的软件包。
-useradd/adduser - 用于创建新的Linux用户。
-echo - 用于在控制台输出字符串,也常用于将字符串重定向到文件中。
-ntpdate/chronyd - 用于配置和同步NTP时间服务。
-ulimit - 用于控制进程可以使用的系统资源,如打开的文件数量、可用内存大小等。
+ssh - 用于远程登录到其他主机。  
+scp - 用于在不同主机之间安全地复制文件。  
+cd - 用于改变当前工作目录。  
+pwd - 用于显示当前工作目录的完整路径。  
+mv - 用于移动或重命名文件和目录。  
+chmod - 用于管理文件和目录的权限。  
+passwd - 用于修改用户密码。  
+usermod - 用于修改用户账户的属性。  
+df - 用于显示文件系统的磁盘空间使用情况。  
+netstat - 用于显示网络连接、路由表和网络接口信息。  
+vi - 用于编辑文本文件。  
+chgrp - 用于修改文件或目录的所属组。  
+chown - 用于修改文件或目录的所有者。  
+du - 用于估计文件或目录的磁盘使用空间。  
+ps - 用于显示当前进程的状态。  
+top - 用于实时显示系统中运行的进程及其资源使用情况。  
+grep - 用于在文件中搜索指定的字符串。  
+cat - 用于连接文件并在标准输出上显示。  
+less - 用于分页查看文件内容。  
+tail - 用于显示文件的末尾部分。  
+ip - 用于显示或管理路由、网络设备、接口和隧道。  
+ifconfig - 用于配置网络接口。  
+ping - 用于测试与另一台主机的网络连接。  
+traceroute - 用于追踪数据包到达目标主机所经过的路由。  
+crontab - 用于创建、编辑或删除定时任务。  
+tar - 用于归档文件。  
+gzip - 用于压缩或解压缩文件。  
+systemctl - 用于管理systemd系统和服务。  
+service - 用于运行System V init脚本。  
+firewall-cmd - 用于管理firewalld防火墙。  
+iptables - 用于配置Linux内核防火墙。  
+lsblk - 用于列出所有可用的块设备。  
+hostnamectl - 用于查询或更改系统主机名。  
+initialize-tsm - 用于初始化IBM Tivoli Storage Manager (TSM)。  
+cp - 用于复制文件和目录。  
+export - 用于设置环境变量。  
+openssl - 用于生成和管理密钥、证书等密码学相关的内容。  
+yum - 用于从yum存储库安装、更新、删除软件包。  
+pip - 用于安装和管理Python的软件包。  
+useradd/adduser - 用于创建新的Linux用户。  
+echo - 用于在控制台输出字符串,也常用于将字符串重定向到文件中。  
+ntpdate/chronyd - 用于配置和同步NTP时间服务。  
+ulimit - 用于控制进程可以使用的系统资源,如打开的文件数量、可用内存大小等。  
 
-以下脚本，从https://github.com/jaywcjlove/linux-command，这个库的command文件夹提取命令的说明，特此感谢，
+以下脚本，从https://github.com/jaywcjlove/linux-command  
+这个库的command文件夹提取命令的说明，特此感谢，
 
 这是运行脚本的目录结构，1.md就是上面命令的集合：
 ```
