@@ -149,7 +149,6 @@ description: 摘要：本文介绍一个典型的BI建设方案的框架。
 
 ![图 8](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/30e58046ccd75d32c45b3bbc90a29bb5f71aa3274b76edad61035afeefa4c23b.webp)  
 
-![](static/C5qAbSP8coNOg1xRhUEcUbo8nYc.png)
 
 # 实施方案
 
