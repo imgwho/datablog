@@ -7,8 +7,10 @@ tags:
 description: 摘要：本文主要介绍Tableau 画上下甘特图的关键步骤和注意事项等。
 ---
 
+# 使用tableau画上下甘特图
+先看效果
+![图 0](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/e395609a9c63e47ecb4eb31eb457f4de0dcbbc9d18fe797e3c356ef75151a4c1.webp)  
 
-# ![image.png](https://cdn.nlark.com/yuque/0/2020/png/93504/1596027330254-04a3795a-c384-476a-b7d9-53280a460e03.png#align=left&display=inline&height=1190&originHeight=1190&originWidth=1253&size=82352&status=done&style=none&width=1253)
 # 难点：
 先看以下数据源，非常简洁
 
@@ -30,10 +32,18 @@ description: 摘要：本文主要介绍Tableau 画上下甘特图的关键步�
 | 2015 | 15.13395162 |
 
 再看以下如何计算2002年到2015年的平均水位线：
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/93504/1596027417148-9186d6ff-4b03-4ed0-a347-d3811dffe15e.png#align=left&display=inline&height=338&originHeight=338&originWidth=566&size=20368&status=done&style=none&width=566)
-即使用window_avg函数![image.png](https://cdn.nlark.com/yuque/0/2020/png/93504/1596027432218-53a1def6-d532-4ced-9597-9ee638db80a7.png#align=left&display=inline&height=853&originHeight=853&originWidth=1098&size=102028&status=done&style=none&width=1098)
+![图 1](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/e1944042844e78a9e3fe1f8b7bb10408dacf148b134c56f1d228d70f990a598e.webp)  
+
+
+
+即使用window_avg函数
+![图 2](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/dfb1bf677f87c6525bebb1cb0b78f33622907821711310c2e35f0393025ce595.webp)  
+
+
+
 然后是高出平均线、低于平均线的值用两种颜色
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/93504/1596027490107-c0a653e1-c5b6-41c9-838c-b477ac51236f.png#align=left&display=inline&height=331&originHeight=331&originWidth=565&size=14982&status=done&style=none&width=565)
+![图 3](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/241efc1ab469d500e9407607bf133121e68d7db8fdf60623a8a2df8f6a2b3321.webp)  
+
 
 附文件：
 [鄱阳湖历年平均水位.zip](https://www.yuque.com/attachments/yuque/0/2020/zip/93504/1596027662884-08a4e7fe-f6e9-437a-be97-5918122947d4.zip?_lake_card=%7B%22uid%22%3A%221596027663472-0%22%2C%22src%22%3A%22https%3A%2F%2Fwww.yuque.com%2Fattachments%2Fyuque%2F0%2F2020%2Fzip%2F93504%2F1596027662884-08a4e7fe-f6e9-437a-be97-5918122947d4.zip%22%2C%22name%22%3A%22%E9%84%B1%E9%98%B3%E6%B9%96%E5%8E%86%E5%B9%B4%E5%B9%B3%E5%9D%87%E6%B0%B4%E4%BD%8D.zip%22%2C%22size%22%3A31156%2C%22type%22%3A%22application%2Fx-zip-compressed%22%2C%22ext%22%3A%22zip%22%2C%22progress%22%3A%7B%22percent%22%3A99%7D%2C%22status%22%3A%22done%22%2C%22percent%22%3A0%2C%22id%22%3A%22LBfYe%22%2C%22card%22%3A%22file%22%7D)

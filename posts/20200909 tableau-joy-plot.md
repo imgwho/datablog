@@ -7,8 +7,8 @@ tags:
 description: 摘要：如何用tableau画joy plot？
 ---
 
-
-# 原文翻译
+# 使用tableau画欢乐图(joy plot)
+# 原文
 
 主要翻译自 [https://www.flerlagetwins.com/2018/05/joy-plot.html#](https://www.flerlagetwins.com/2018/05/joy-plot.html#)<br />（感谢西南小组tableau交流问答群刘瑞协助）<br />
 
@@ -61,11 +61,18 @@ Sort表为您提供了一种简单的方法来为您正在绘制的维度的成�
 
 ## 数据准备
 
-需要data、sort、model三个表。<br />[Joy Plot Template - Dates.xlsx](https://www.yuque.com/attachments/yuque/0/2020/xlsx/93504/1598968661692-aa5106c7-c2f3-4401-961e-224dcdf344eb.xlsx)<br />[Joy Plot Template - Dates.xlsx](https://www.yuque.com/attachments/yuque/0/2020/xlsx/93504/1598968628017-8fd8143f-a4d5-4e05-a014-6f09eedbfed0.xlsx?_lake_card=%7B%22uid%22%3A%221598968629448-0%22%2C%22src%22%3A%22https%3A%2F%2Fwww.yuque.com%2Fattachments%2Fyuque%2F0%2F2020%2Fxlsx%2F93504%2F1598968628017-8fd8143f-a4d5-4e05-a014-6f09eedbfed0.xlsx%22%2C%22name%22%3A%22Joy%20Plot%20Template%20-%20Dates.xlsx%22%2C%22size%22%3A23262%2C%22type%22%3A%22application%2Fvnd.openxmlformats-officedocument.spreadsheetml.sheet%22%2C%22ext%22%3A%22xlsx%22%2C%22progress%22%3A%7B%22percent%22%3A99%7D%2C%22status%22%3A%22done%22%2C%22percent%22%3A0%2C%22id%22%3A%22qmeDZ%22%2C%22card%22%3A%22file%22%7D)<br />进行连接后如下：<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/93504/1598967804294-780dd78f-65a8-4c91-bbab-6137ced5f3cb.png#align=left&display=inline&height=751&originHeight=751&originWidth=1457&size=151734&status=done&style=none&width=1457)
+需要data、sort、model三个表。<br />[Joy Plot Template - Dates.xlsx](https://www.yuque.com/attachments/yuque/0/2020/xlsx/93504/1598968661692-aa5106c7-c2f3-4401-961e-224dcdf344eb.xlsx)<br />[Joy Plot Template - Dates.xlsx](https://www.yuque.com/attachments/yuque/0/2020/xlsx/93504/1598968628017-8fd8143f-a4d5-4e05-a014-6f09eedbfed0.xlsx?_lake_card=%7B%22uid%22%3A%221598968629448-0%22%2C%22src%22%3A%22https%3A%2F%2Fwww.yuque.com%2Fattachments%2Fyuque%2F0%2F2020%2Fxlsx%2F93504%2F1598968628017-8fd8143f-a4d5-4e05-a014-6f09eedbfed0.xlsx%22%2C%22name%22%3A%22Joy%20Plot%20Template%20-%20Dates.xlsx%22%2C%22size%22%3A23262%2C%22type%22%3A%22application%2Fvnd.openxmlformats-officedocument.spreadsheetml.sheet%22%2C%22ext%22%3A%22xlsx%22%2C%22progress%22%3A%7B%22percent%22%3A99%7D%2C%22status%22%3A%22done%22%2C%22percent%22%3A0%2C%22id%22%3A%22qmeDZ%22%2C%22card%22%3A%22file%22%7D)<br />进行连接后如下：<br />
+
+![图 3](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/8720e7d7c05149e4897621478831ad9310b995ec4b6d808577ebf3a3bbc90e68.webp)  
+
 
 ## 图形解构
 
-观察需要最少字段形成的图。<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/93504/1598970022982-9cddd00c-cd6c-4c90-9205-422dd5fdaaab.png#align=left&display=inline&height=966&originHeight=966&originWidth=1451&size=149981&status=done&style=none&width=1451)<br />可以发现主要有4个字段：time、Value Adjusted for Dimension、Key、Path。<br />重要的字段如下：
+观察需要最少字段形成的图。 
+![图 4](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/7072b0c8684459856ef934d37adc5acc2c26b502a8290f61219890b9855819bb.webp)  
+
+
+可以发现主要有4个字段：time、Value Adjusted for Dimension、Key、Path。<br />重要的字段如下：
 
 ### Path
 
@@ -80,7 +87,18 @@ ELSE DATE((INT([Max Value])*2) - INT([日期Time]) + 1)
 END
 ```
 
-![image.png](https://cdn.nlark.com/yuque/0/2020/png/93504/1599572138702-963c0ddd-dd00-477e-8772-7688a98b01b6.png#align=left&display=inline&height=969&originHeight=969&originWidth=1702&size=168587&status=done&style=none&width=1702)<br />再将标记的形状改为多边形即可<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/93504/1599573453100-75febf84-607d-4d0b-9b1e-6f30e313b4e3.png#align=left&display=inline&height=822&originHeight=822&originWidth=2281&size=92788&status=done&style=none&width=2281)<br />最后勾选所有dimension，再按降序排序key即可<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/93504/1599574213167-b21e3936-b5c3-46dd-a13c-23a16324313c.png#align=left&display=inline&height=1250&originHeight=1250&originWidth=1686&size=155732&status=done&style=none&width=1686)
+![图 5](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/a7de0c95bc68028d2efa16356f1a070498c4286ebc3f119c80a482f96db87807.webp)  
+
+
+<br />再将标记的形状改为多边形即可<br />
+
+![图 6](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/d009a68aee8b482c5b6d62cceda1b3a46c1fc432378db686ca39ee760beaa9bd.webp)  
+
+
+最后勾选所有dimension，再按降序排序key即可<br />
+
+![图 7](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/1bb906d17a413f231d86ebb650215a6e65e262043906283766118e65a72dc5c3.webp)  
+
 
 ### Max Value
 
@@ -133,7 +151,10 @@ END
 
 ### Spacing
 
-调整间距<br />![image.png](https://cdn.nlark.com/yuque/0/2020/png/93504/1599471647568-94a5bd1a-851c-4980-940a-47f609e5aaf6.png#align=left&display=inline&height=292&originHeight=292&originWidth=572&size=17785&status=done&style=none&width=572)
+调整间距<br />
+
+![图 8](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/b97b1b2df533c935209b0770860c3ccc4f588f9acb761f8d39599f100a454af0.webp)  
+
 
 
 <Comment />

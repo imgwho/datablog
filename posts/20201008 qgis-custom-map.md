@@ -7,7 +7,7 @@ tags:
 description: 摘要：地图软件qgis自定义地图教程。
 ---
 
-
+# 如何用qgis生成自定义样式的地图
 # 前置条件
 需要安装qgis，下载链接如下：
 [https://qgis.org/downloads/QGIS-OSGeo4W-3.12.3-1-Setup-x86.exe](https://qgis.org/downloads/QGIS-OSGeo4W-3.12.3-1-Setup-x86.exe)  

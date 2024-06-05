@@ -6,7 +6,7 @@ tags:
   - linux
 description: 摘要：本文主要介绍Tableau server 安装的关键步骤和注意事项等。
 ---
-# Tableau server 安装
+# Tableau Server 安装实操(2022.1为例)
 
 # 安装步骤
 此教程主要介绍安装和配置TableauServer的步骤，且只针对单节点。 运行安装之后，必须通过激活许可证、注册TableauServer和配置包括身份验证 在内的各种设置来继续进行设置，主要有以下步骤：
