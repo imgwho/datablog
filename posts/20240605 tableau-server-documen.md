@@ -12,6 +12,8 @@ description: 摘要：本文主要介绍Tableau server 的知识体系，包括�
 请注意：这不是本考试内容的全面清单。  
 [https://www.tableau.com/zh-cn/learn/certification/tableau-server-certified-associate-exam-guide](https://www.tableau.com/zh-cn/learn/certification/tableau-server-certified-associate-exam-guide)
 
+
+## 考试指南结构
 ### 领域 1：连接到数据并准备数据
 
 **1.1 用户体验**
@@ -219,7 +221,7 @@ description: 摘要：本文主要介绍Tableau server 的知识体系，包括�
 这里主要以Linux系统为例  
 https://help.tableau.com/current/server-linux/zh-cn/get_started_server.htm
 
-## 目录结构
+## 帮助文档结构
 
 * Tableau Server 入门指南
     * 服务器管理速查表：Salesforce 集成
