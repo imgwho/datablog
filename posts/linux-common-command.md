@@ -1,6 +1,6 @@
 ---
 date: 2024-06-05
-title: Linux 
+title: Linux 常用命令纪录
 tags:
   - Linux
 description: 摘要：本文主要介绍Linux上比较常用的命令及用法。
