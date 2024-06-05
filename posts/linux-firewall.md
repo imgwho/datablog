@@ -2,7 +2,7 @@
 date: 2024-06-05
 title: Linux 防火墙开放端口
 tags:
-  - linux
+  - Linux
 description: 摘要：本文主要介绍linux上面如何开放需要的服务的端口，避免服务访问失败。
 ---
 

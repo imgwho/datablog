@@ -3,7 +3,7 @@ date: 2024-06-01
 title: Tableau Server 安装实操(2022.1为例)
 tags:
   - tableau server
-  - linux
+  - Linux
 description: 摘要：本文主要介绍Tableau server 安装的关键步骤和注意事项等。
 ---
 # Tableau Server 安装实操(2022.1为例)
@@ -262,10 +262,10 @@ tsm restart
 ```
 
 ### 待补充
-  - [❓] 配置 SMTP 设置
-  - [❓] TSM 中的文件和权限
+  - [❓] 配置 SMTP
+  - [❓] 配置 SSL
+  - [❓] 设置 TSM 中的文件和权限
   - [❓] 配置数据缓存
-  - [❓] 系统用户和 sudo 权限
 
 
 <Comment />
