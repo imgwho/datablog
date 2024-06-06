@@ -1,11 +1,11 @@
 ---
-date： 2024-06-07
-title：Tableau 数据可视化分析视频课程
-tags：
+date: 2024-06-07
+title: Tableau 数据可视化分析视频课程
+tags:
   - Tableau
   - 数据分析
   - 可视化
-description： 摘要：本文喜乐君最新构思的视频课程内容，主要有4个方面，看如何落地。
+description: 摘要：本文喜乐君最新构思的视频课程内容，主要有4个方面，看如何落地。
 ---
 
 # Tableau 数据可视化分析 视频课程
