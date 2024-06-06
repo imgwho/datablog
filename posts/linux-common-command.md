@@ -44,7 +44,7 @@ firewall-cmd - 用于管理firewalld防火墙。
 iptables - 用于配置Linux内核防火墙。  
 lsblk - 用于列出所有可用的块设备。  
 hostnamectl - 用于查询或更改系统主机名。  
-initialize-tsm - 用于初始化IBM Tivoli Storage Manager (TSM)。  
+initialize-tsm - 用于初始化TSM。  
 cp - 用于复制文件和目录。  
 export - 用于设置环境变量。  
 openssl - 用于生成和管理密钥、证书等密码学相关的内容。  
