@@ -1,5 +1,5 @@
 ---
-date: 2024-06-05
+date: 2024-06-04
 title: Tableau Server 知识体系参考
 tags:
   - tableau server

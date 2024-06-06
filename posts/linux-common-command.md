@@ -1,5 +1,5 @@
 ---
-date: 2024-06-05
+date: 2024-06-03
 title: Linux 常用命令纪录
 tags:
   - Linux
