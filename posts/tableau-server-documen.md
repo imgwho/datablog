@@ -2,7 +2,7 @@
 date: 2024-06-04
 title: Tableau Server 知识体系参考
 tags:
-  - tableau server
+  - Tableau Server
 description: 摘要：本文主要介绍Tableau server 的知识体系，包括官方的帮助文档设计的结构和官方考试指南安装的内容等。
 ---
 # Tableau Server 知识体系参考

@@ -693,7 +693,7 @@ file：指定要更改权限的一到多个文件。
 > - `=`符号代表添加目标用户相应的权限，删除未提到的权限。
 
 ```shell
-linux文件的用户权限说明：
+Linux文件的用户权限说明：
 
 # 查看当前目录（包含隐藏文件）的长格式。
 ls -la
@@ -4090,10 +4090,10 @@ iptables -t mangle -A INPUT -p tcp --src 192.168.1.2 --dport 443 -j SECMARK --se
 ## 更多实例
 > 用iptables搭建一套强大的安全防护盾 http://www.imooc.com/learn/389
 
-iptables: linux 下应用层防火墙工具
+iptables: Linux 下应用层防火墙工具
 
 iptables 5链: 对应 Hook point
-netfilter: linux 操作系统核心层内部的一个数据包处理模块
+netfilter: Linux 操作系统核心层内部的一个数据包处理模块
 Hook point: 数据包在 netfilter 中的挂载点; `PRE_ROUTING / INPUT / OUTPUT / FORWARD / POST_ROUTING`
 
 iptables & netfilter

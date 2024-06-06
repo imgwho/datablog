@@ -2,7 +2,7 @@
 date: 2024-06-01
 title: Tableau Server 安装实操(2022.1为例)
 tags:
-  - tableau server
+  - Tableau Server
   - Linux
 description: 摘要：本文主要介绍Tableau server 安装的关键步骤和注意事项等。
 ---
@@ -43,7 +43,7 @@ su tabadmin #我用这个命令的时候还是没有权限，用上面的没问�
 点进目前官网发现有以下大版本：2023.3 2023.1 2022.3 2022.1 2021.4 2021.3 2021.2  [https://www.tableau.com/support/releases/server](https://www.tableau.com/support/releases/server)  
 点击需要的版本找到下载地址（2022.1.23为例）
 [https://www.tableau.com/support/releases/server/2022.1.23#esdalt](https://www.tableau.com/support/releases/server/2022.1.23#esdalt)  
-这里可以看到2022.1.23的linux安装包下载地址是
+这里可以看到2022.1.23的Linux安装包下载地址是
 [https://downloads.tableau.com/esdalt/2022.1.23/tableau-server-2022-1-23.x86_64.rpm](https://downloads.tableau.com/esdalt/2022.1.23/tableau-server-2022-1-23.x86_64.rpm)，一般用wget下载  
 
 ![图 0](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog%2F8f87792d7c92309cc00bfa0555933b3debda5f65facc273421f65c385ab18c52.webp)  

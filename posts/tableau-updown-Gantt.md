@@ -1,8 +1,8 @@
 ---
 date: 2020-07-29
-title: 使用tableau画上下甘特图
+title: 使用Tableau画上下甘特图
 tags:
-  - tableau
+  - Tableau
   - dataviz-tips
 description: 摘要：本文主要介绍Tableau 画上下甘特图的关键步骤和注意事项等。
 ---

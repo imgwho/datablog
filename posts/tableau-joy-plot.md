@@ -1,13 +1,13 @@
 ---
 date: 2020-09-09
-title: 使用tableau画欢乐图(joy plot)
+title: 使用Tableau画欢乐图(joy plot)
 tags:
-  - tableau
+  - Tableau
   - dataviz-tips
-description: 摘要：如何用tableau画joy plot？
+description: 摘要：如何用Tableau画joy plot？
 ---
 
-# 使用tableau画欢乐图(joy plot)
+# 使用Tableau画欢乐图(joy plot)
 # 原文
 
 主要翻译自 [https://www.flerlagetwins.com/2018/05/joy-plot.html#](https://www.flerlagetwins.com/2018/05/joy-plot.html#)<br />（感谢西南小组tableau交流问答群刘瑞协助）<br />
