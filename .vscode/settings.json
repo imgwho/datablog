@@ -1,0 +1,14 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "138.197.98.116",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "dg",
+      "database": "tt",
+      "username": "gadmin",
+      "password": "123456"
+    }
+  ]
+}
