@@ -9,26 +9,29 @@ description: 摘要：本文主要介绍在CentOS环境下安装PostgreSQL的关
 
 # CentOS 7.9 安装PostgreSQL
 
-这里的系统版本只能源码安装，如果不用源码则很简单
+先是centos 9 安装的话，步骤如下：
 ```
+
+# 更新软件包
+sudo dnf update -y
+
 # Install the repository RPM:
-sudo yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+sudo dnf install https://download.postgresql.org/pub/repos/yum/reporpms/EL-9-x86_64/pgdg-redhat-repo-latest.noarch.rpm -y
+
+sudo dnf -qy module disable postgresql
 
 # Install PostgreSQL:
-sudo yum install -y postgresql16-server
+sudo dnf install postgresql16-server -y
 
 # Optionally initialize the database and enable automatic start:
 sudo /usr/pgsql-16/bin/postgresql-16-setup initdb
 sudo systemctl enable postgresql-16
 sudo systemctl start postgresql-16
-
-# 初始化数据库：
-postgresql-setup initdb
-# 启动数据库服务：
-systemctl start postgresql16
 ```
 
-下面是源码安装
+
+
+下面是低版本的centos系统，源码安装
 ## 创建postgres用户来安装
 
 ```

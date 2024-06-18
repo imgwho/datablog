@@ -1,19 +1,22 @@
 ---
-date: 2024-06-08
-title: CentOS 7 安装 MySQL 8
+date: 2024-06-18
+title: CentOS 9 安装 MySQL 8
 tags:
   - Linux
   - MySQL
 description: 摘要：本文主要介绍在CentOS环境下安装MySQL的关键步骤和注意事项等。
 ---
 
-# CentOS 7.9 安装PostgreSQL
+# CentOS 9 安装MySQL 8
 
-## 通过源安装
+## 通过软件包安装
 
 ```
-sudo rpm -Uvh https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
-sudo yum install --nogpgcheck mysql-community-server
+# 安装基础环境依赖
+yum install -y gcc gcc-c++ automake pcre pcre-devel zip openssl pcre-devel libtool make kernel-devel
+
+sudo dnf install -y https://dev.mysql.com/get/mysql80-community-release-el9-5.noarch.rpm
+sudo dnf install mysql-community-server
 ```
 ## 初始化
 
@@ -45,6 +48,9 @@ default-character-set=utf8
 ## 重启服务
 ```
 systemctl restart mysqld
+
+# 连接MySQL
+mysql -u root -p
 ```
 
 <Comment />
