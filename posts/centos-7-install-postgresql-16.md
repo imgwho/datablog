@@ -27,6 +27,19 @@ sudo dnf install postgresql16-server -y
 sudo /usr/pgsql-16/bin/postgresql-16-setup initdb
 sudo systemctl enable postgresql-16
 sudo systemctl start postgresql-16
+
+# 连接postgre，首先切换用户
+[root@centos-s-2vcpu-2gb-nyc3-01 ~]# su - postgres
+[postgres@centos-s-2vcpu-2gb-nyc3-01 ~]$ psql
+psql (16.3)
+Type "help" for help.
+
+postgres=# \du
+                             List of roles
+ Role name |                         Attributes
+-----------+------------------------------------------------------------
+ postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS
+
 ```
 
 
@@ -193,7 +206,8 @@ systemd─┬─2*[agetty]
 ```
 # 切换到 postgres用户
 su - postgres
-/data/server/pgsql/bin/psql
+# 连接postgre
+/data/server/pgsql/bin/psql 
 
 # 创建用户及密码
 postgres=# create user gadmin password '123456';
