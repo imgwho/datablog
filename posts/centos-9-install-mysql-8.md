@@ -58,4 +58,12 @@ systemctl restart mysqld
 mysql -u root -p
 ```
 
+## 错误排查
+```
+# 服务启动失败，先看配置文件
+[root@centos-s-2vcpu-2gb-nyc3-01 ~]# mysqld --validate-config
+2024-06-20T00:36:37.507146Z 0 [ERROR] [MY-000067] [Server] unknown variable 'default-authentication-plugin=mysql_native_password'.
+2024-06-20T00:36:37.507422Z 0 [ERROR] [MY-010119] [Server] Aborting
+```
+
 <Comment />
