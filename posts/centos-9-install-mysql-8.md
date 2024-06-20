@@ -11,11 +11,16 @@ description: 摘要：本文主要介绍在CentOS环境下安装MySQL的关键�
 
 ## 通过软件包安装
 
+在这个网站找到最新的仓库<https://dev.mysql.com/downloads/repo/yum/>，根据版本需要选择第一个  Red Hat Enterprise Linux 9 / Oracle Linux 9，点击下载，在跳转的新页面右键点击"No thanks, just start my download."，复制链接，拿到最新的存储库地址。
+
+补充知识：dnf命令是 Fedora 和基于 Fedora 的系统（如 CentOS 和 RHEL 8 及以后版本）使用的软件包管理器。它用于安装、更新和删除软件包。  
+RPM 包的 URL是一个网址，安装这个包会在你的系统上配置 MySQL 存储库，从而使你能够使用 dnf 安装和更新 MySQL 相关的软件包。
+
 ```
 # 安装基础环境依赖
 yum install -y gcc gcc-c++ automake pcre pcre-devel zip openssl pcre-devel libtool make kernel-devel
 
-sudo dnf install -y https://dev.mysql.com/get/mysql80-community-release-el9-5.noarch.rpm
+sudo dnf install -y https://dev.mysql.com/get/mysql84-community-release-el9-1.noarch.rpm
 sudo dnf install mysql-community-server
 ```
 ## 初始化
