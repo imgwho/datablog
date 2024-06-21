@@ -42,7 +42,8 @@ lower-case-table-names=1
 default-time_zone='+8:00'
 max_connections=1000
 max_connect_errors=1000
-default-authentication-plugin=mysql_native_password
+# default-authentication-plugin=mysql_native_password mysql 8.4 用下面这行替换这个
+mysql_native_password=ON
 character-set-server=utf8
 sql_mode='STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION'
 
