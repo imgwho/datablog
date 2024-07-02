@@ -4,7 +4,7 @@ title: Tableau实现带分级的单级树状图
 tags:
   - Tableau
   - Tableau教程
-description: 摘要：本文以肿瘤患儿省外就医数据为实例，演示从数据处理到用Tableau进行流向可视化的过程。
+description: 摘要：本文以本草纲目的归经等数据为实例，演示从数据处理到用Tableau进行地图可视化的过程。
 ---
 
 # Tableau实现带分级的单级树状图
