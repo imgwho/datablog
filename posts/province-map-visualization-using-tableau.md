@@ -1,6 +1,6 @@
 ---
 date: 2024-07-02
-title: Tableau实现去向省份分布的地图可视化
+title: Tableau实现流向省份分布的地图可视化
 tags:
   - Tableau
   - Tableau教程
