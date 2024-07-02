@@ -15,13 +15,11 @@ description: 摘要：本文以肿瘤患儿省外就医数据为实例，演示�
 
 ![图 0](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/973308500eb3b8e392a323cb27625a3e3cd56f6cd4b8468f616124e2a0d84af7.webp)  
 
+## 处理数据
 
-## 处理数据-按照“、”拆分列，然后合并
-
-需要拆分里面的字段，我用python直接处理，最后得到想要的数据，原数据有163行，处理后有2000多行
+需要拆分里面的字段，按照“、”拆分列，然后合并，我用python直接处理，最后得到想要的数据，原数据有163行，处理后有2000多行
 
 ![图 1](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/1e1a6bf7cce55292309001766d89d6f2de5711e7fac2c9f5bfe6315a0b8b2117.webp)  
-
 
 ```
 import pandas as pd
@@ -60,7 +58,7 @@ print(df_final)
 ## 使用模板
 
 在这里下载模板，<https://www.datavizcanvas.com/2020/04/01/creating-tree-chart-in-tableau/>
-粘贴以下代码，与原数据进行关联，然后重命名模板中的字段，最后替换数据源即可
+打开文件，切换到数据连接的地方，编辑数据关系，粘贴以下代码，与原数据进行关联，然后重命名模板中的字段，最后替换数据源即可
 
 ```
 Path
