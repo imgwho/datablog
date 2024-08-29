@@ -19,7 +19,8 @@ Tableau 可视化扩展 API 是一个 JavaScript 库，它按照包含与 Tablea
 
 在Tableau 2024.2 以上版本中，点击标记，选择添加扩展程序，即可选择可视化扩展，调用第三方的 js 代码在 Tableau 中实现可视化。
 
-![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=NDAyZjdkNDJjZTNmYzIzMDk2OTk0YjQwMTlmMjVkNmNfaW5zemdmTkRMRzVaV2xZVWRheUoxZFlaZ2JsVVJ4dmdfVG9rZW46TDNtZGJOZ1FOb3BjVDh4Qm1QUWN6Nmd3bkJiXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDRjZDczNjYwYTc5ZWE3OGZkMTM4YTk3ZjQ0Y2UxMWJfT3lzMjhDNUtzbEhuUXk2YlA0YW5FVkw3cUk2bFg3UnVfVG9rZW46VEdwRGJJMjFFb2JSQkN4UEtvOGNMVDRibkJmXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)
+![图 0](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/29030fa973578085c0b27d710e8ff39b54d90451e713456d1f5bc6351c9a5b2e.webp)  
+
 
 本教程设定是 windows 操作系统环境， macOS 大同小异，意图让用户入门 Tableau可视化扩展的开发， 并用实际案例向用户展示效果。
 
@@ -35,24 +36,24 @@ Node.js 请安装版本 v20.11.1，macOS 访问以下网址然后用 brew 方式
 
 https://nodejs.org/en/blog/release/v20.11.0
 
-![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=YjhkNTNlM2UyMWViNjY2MTdmNzk1Nzk0YzNiNGM1ZTdfVmliUTA1ZVpnZGtUZWNEeXo5QUxmQ292WmlCRGJvSHlfVG9rZW46QVU4dWJuSGNvb3puZ3h4SG9VcmM4WlJXbnBiXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)
+
 
 代码编辑器推荐使用vscode，https://code.visualstudio.com/download
 
 安装vscode之后打开项目文件夹，然后右键 在集成终端中打开，即可输入后面需要用到的终端命令 npm start 等
-
-![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=ODgzZjM0OThkNGVjZmEwNzhiNDExZWVmYzA5ZDRmOTRfTHk2WE0wYVdUUjBDZVl5QjRpYThrTnZjR3A5eEc1d2FfVG9rZW46UXRoTGJyNFhzb3VRWlR4cUl5ZmNYcmptbnZXXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)
 
 - 获取 API 的源文件可以点击以下链接下载
     
 
 https://github.com/tableau/extensions-api/archive/main.zip
 
-下载完成之后可以看到一个压缩包，箭头所指方向就是官方的示例可视化扩展程序，稍后会介绍
+下载完成之后可以看到一个压缩包，其中的samples文件夹下面的Viz文件夹，就是官方的示例可视化扩展程序，稍后会介绍
 
-![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=ODA0OWMxMDZhOGNhMjE1NTViNDA4MTkxMTM3ODU0MTRfNk96WDl4cE1aQXVmbXRPTzNrTnZiMlNwSEhsMHMxNWRfVG9rZW46U0pCTmJ2RjJWb0dlNTZ4UnY0YWN5VGtBbnNiXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)
 
-- 或者直接使用我下载并配置好 npm 包环境的文件夹
+
+- 或者直接使用我下载并配置好 npm 包环境的文件夹，下载以下网址的5个文件并解压即可：
+https://github.com/imgwho/datablog/tree/main/share
+
     
 
 暂时无法在飞书文档外展示此内容
@@ -79,7 +80,7 @@ https://github.com/tableau/extensions-api/archive/main.zip
 
 npm start 之后效果如图
 
-![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=NjU0ZTE1YzY3NDRjOTk5ZWMyNmFkMGY0MzU5YTM2NWRfWXZaWjdERGtjTXVWVG9ha3RVNDFMOHlWTFZIRERnQ3RfVG9rZW46R3NKSmIyUXpzb2IwR2x4WlhyNGNtbGNRbjBlXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=ZjM5MDQxOWM1OTJkNzI1ZGI4YzJhNGNmZjU0Y2YyOTVfbTc5bElSTFIzcXFtb2l0ZTR5T1NSY2tTcm5teTJ0UURfVG9rZW46Uk4wMmI1Vmdub1JBcUJ4aFlMd2NpMDlTblpkXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)
+![图 1](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/90ff3844ce6827ba474d3c6cc1696e7e669fecac84be1ae06035086270c28e63.webp)  
 
 # 开发可视化扩展
 
@@ -87,13 +88,15 @@ npm start 之后效果如图
 
 我们从这个案例开始，看看可视化扩展程序如何运行的，首先打开 Tableau
 
-在 Viz 扩展中，选择添加扩展。
+在 标记卡的最后一栏，选择添加扩展。
 
-![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=ODdiNjQ1ZmQ0OTEyZWVkYmY5MmE3YzU1ZjE0ZTA1NGRfNjFmNE5uZUlNb3RBYmM4MG1ReG02bDRmZDlpR2hYdlFfVG9rZW46WkJzMmJTY0FDb2piTkp4SjRud2NhV3hJblllXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)
+![alt text](https://tableau.github.io/extensions-api/assets/images/viz_ext_marks_AddExt-1c4217621e25520fecaad434d0892ffa.png)
+
 
 在出现的添加扩展对话框中，选择访问本地扩展。
 
-![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=NmY5NzAzZDU3YWYyNTFjMjNlMDY4YjI5ZTg4MTE0ZWRfdW5rNkJnaVBkNGlUTEZYbGZtMUt6SXVYNDZrcXRzb0dfVG9rZW46VlE4TWJFUURWb0FZdFp4VmNxMWNnYlVobmlnXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)
+![alt text](https://tableau.github.io/extensions-api/assets/images/viz_ext_addlocal-9a6280428064a06db147e82ee510a52e.png)
+
 
 每个 Tableau 扩展都有一个元文件（.trex），描述了扩展并标识了 Web 应用程序的位置。有关创建 `.trex` 元文件的更多信息，请参阅 Tableau 可视化扩展元文件。
 
@@ -101,11 +104,11 @@ npm start 之后效果如图
 
 打开 `connectedScatterplot.trex` 文件。如果提示，请点击“确定”以允许视图扩展在工作表中运行。该扩展是一个网络启用的扩展，这意味着它能够访问 Tableau 之外的资源，并且不在 Tableau 沙盒中托管。这里的网络是指我们用 npm start 运行的这个服务的网络。
 
-![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDQwYTA1ODdlNTE0YzYxNzdkYmJiOGEwZWUyMjBhZmFfY0RzMFFvYTdESFduUVlwQ3JWbWU4NGJLVDd2bDY4R0xfVG9rZW46T0dwMGJjUk9tb3hwN2R4akdIQWNacnRIbm5nXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)
+
 
 在工作表中，将利润字段拖放到 X 编码框中。将“销售”字段拖到 Y 编码框中。将“订单日期”字段拖放到文本编码框中。右键点击蓝色药丸，现在显示为 YEAR(Order Date)，将其改为月。连接散点图在视图中出现。
 
-![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=MTE5NGVkYTA0NjFhNGM1MzFiNDE4YzI1YzNmZTg4YjBfUTR6WlpGQUx4YVA2TmZrdFpjSVJqaWxmYmYwR3RKYmtfVG9rZW46SnlTaWJFdWtpb01xVGN4NXRTdGNCbmJVbmhmXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)
+![!\[\](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=MTE5NGVkYTA0NjFhNGM1MzFiNDE4YzI1YzNmZTg4YjBfUTR6WlpGQUx4YVA2TmZrdFpjSVJqaWxmYmYwR3RKYmtfVG9rZW46SnlTaWJFdWtpb01xVGN4NXRTdGNCbmJVbmhmXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)](https://tableau.github.io/extensions-api/assets/images/connectedScatterplot-51816c0144ab726d51a4ea1df0fe2426.png)
 
 ## 创建“Hello World”可视化扩展
 
@@ -258,7 +261,8 @@ HelloVizExtension.js
 
 然后在 Viz 扩展中，选择添加扩展。在出现的添加扩展对话框中，选择访问本地扩展。选择我们刚才写的扩展，将一些字段拖放到标记卡上剪头所指的图标上。您添加到标记卡的字段名称会在工作表中显示。每次添加或删除字段时，名称都会更新。
 
-![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=NzZiNjFjYWYwNTQzMjEzNzJhY2FlNjVmNWEzNjFjY2NfbzZuNHZaVzZuT0pKM3JGVmJDc1JSSUMwZXFTNllKc1ZfVG9rZW46RW5pSWJLTVRZb296M2J4TFY5YWNxOGZpbm5BXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)
+![图 3](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/e98ba64632811f971519a6bd3b6c95f0e4026a4b20643495e4448d34ae73ded4.webp)  
+
 
 ### 原理解释
 
@@ -549,7 +553,8 @@ Cursor 配置 deepseek模型的教程是 https://juejin.cn/post/7400945359194210
 
 举例来讲，首先我告诉 ai ，什么是可视化扩展，然后告诉它我想实现一个 tableau 的雷达图可视化扩展
 
-![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=ODQ0OGM1ZjFjNjk1NDRmZWQyMmMxM2E0NzY0MWQ1OGRfd0RIOWhZb21DcWl4QzRIbTZhdmtEeXJkaVBSeERCaTJfVG9rZW46TUM4TmI4bmtJb2VwTlN4MzFwQ2M1NERtbmZoXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)
+![图 4](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/9923f151581e8967ba42784f628061c3b5bf5acc20f170c1d3d3dedd236a5e2c.webp)  
+
 
 这是我跟它的第一轮对话，ai 会给你一些代码参考，我一般直接复制拿来用：
 
@@ -563,19 +568,21 @@ connectedScatterplot.trex, connectedScatterplot.html, connectedScatterplot.js 3�
 
 -remote-debugging-port=8696
 
-![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=MzQ2ZTVlMGFkZDkxNDNiZWZhMjA2YjQ1OTFkZTgxMGZfalRvY1hkODJmU1lSUDQ2UVNLbW1SZVRiQVVnM2JuT1FfVG9rZW46WXptUGI3VUhkb1d4Vkh4bFVnNGNyNTNNbmg3XzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)
+![!\[\](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=MzQ2ZTVlMGFkZDkxNDNiZWZhMjA2YjQ1OTFkZTgxMGZfalRvY1hkODJmU1lSUDQ2UVNLbW1SZVRiQVVnM2JuT1FfVG9rZW46WXptUGI3VUhkb1d4Vkh4bFVnNGNyNTNNbmg3XzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)](https://tableau.github.io/extensions-api/assets/images/Tableau_shortcut_debug-a02a18a1a2864a635a53f1ddc325c4f0.png)
 
 在标记工具栏，添加扩展程序，然后选择本地扩展，打开我们刚才编写的扩展
 
 现在再打开上面下载的 chrome，访问 http://localhost:8696/
 
-![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDkxNTA5ZjY3NjcxM2ZlZWI3YzNlM2JmNThhOWVlOWFfYkd3ekJzdlg4TzJXdEJVUUgxZjFMOWhwZFkzRXI5dktfVG9rZW46TW5CaWJSeDFQbzBpTkJ4OXhFWGNzbktMblplXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)
+![图 5](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/5767f990cc862fa6219f02f4844899af402d97aac82531b4db241278afbe3434.webp)  
+
 
 ### 调试过程
 
 多刷新几次，选择第一个雷达图，然后就可以排查错误
 
-![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=YzA5YjlkNDJmZjFkOTAxYTA5NjI0ZTcyMzFmMTBlOWNfWUU4RDYzT1FLZlBIVUpKYVFDSlkwNThxeHZzVUEydGlfVG9rZW46S0JEYWJ0ZjJLbzdhWEx4RG4zOGNVSzg4bmFiXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)
+![图 6](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/dbd1f1aa8dba80eb6efd794caeaa550e7cf600d30fc41a9aa3747af452a48f06.webp)  
+
 
 比如这里出现的错误是说dashboard没有定义
 
@@ -588,11 +595,12 @@ tableau.extensions.dashboardContent.dashboard.worksheets.find(w => w.name === 'R
 
 遇到的错误继续问 ai 它会告诉你怎么改
 
-![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=M2Y0OTJjODc4Mjk0ZjllMzAyM2Y3YWE5YzE3YjIwMTBfUDhsVmo0WDlia0VuNW5xZ2ZVUHlPWWhmV2JCQnpjREJfVG9rZW46Um1XQWJUMUVlbzRmTmJ4dXZoRmNLcmE4bmJIXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)
+![图 7](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/0a2fafacbcd28601f20797d7cc485face9c0d1486b1a3a33dbf4bb6ceb4227c0.webp)  
+
 
 修改完代码之后，重新添加一次扩展程序才能继续查看，每修改一次都需要进行这个操作
 
-![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDdhOWJiMzViZjI5OThjNmQ3MTc0OTU1NTQ3NGIzMmFfb2g2SGFQbGp5cnJQMzkxTlgwUDZ0bk9RRVhSVDhOak9fVG9rZW46Tk5PNmJtMkFYb0RXY1h4TzdxUWNDelZobmhjXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)
+![图 8](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/66de59ad5fc8e9e0dab911d4597cef66372e14d44add16787c1e40ee7bbfe252.webp)  
 
 我们注意到现在的报错跟之前不一样，并且右边的 chrome 显示的就是 tableau 工作表的实时画面
 
@@ -600,17 +608,21 @@ tableau.extensions.dashboardContent.dashboard.worksheets.find(w => w.name === 'R
 
 我们继续根据这些报错信息询问 ai ，它建议将拿到的数据打印出来
 
-![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=NWZhNDdjOGZlMDVlYmU5NmFmNGNiOTJjYWE2YzdlYzBfclIxWVZBZGRWdEJwcExWOHFCRGdvSGU0U1U1clQ4UHNfVG9rZW46V0pKZ2IxWHJKb2ZiN1N4cUN3SWNmcTBSbkpjXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=OTljMjdmODY3NWYzNDI0ZmUwNmQxMmQ4ZjVjNzg4OGZfM21SaEJ4ZVJqOFJ6YXhOQ1haRGdBVG1lTHh5R21ZbFNfVG9rZW46U3NYeWJkbm93b0lvN1Z4N1RCZGNmbjFkbnlkXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)
+![图 9](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/b42871b7717e15b2e019d0073f1845ce325bc69ef14e93930771e3eadced31d2.webp)  
+
+
 
 将数据打印出来之后发现数据能够顺利拿到，值是正确的
 
-![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=M2UwMThmZjk0OGY2YTU0NTIzMzdiYjVhMmMyMjA4ZWVfRlJmUkxubGFJZGpKb0cxZGRUcE1TZldXM0Y3aURuNm9fVG9rZW46TU56cGJrZVBFb3QyeHp4QUYzY2N4NXZFbmxmXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)
+![图 10](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/b3438ecd7ad540fcba07d28b648b51657e1b543479555607584f4162318173a9.webp)  
+
 
 现在应该就是渲染的问题，又去查看了参考的雷达图的源代码发现那里的数据结构不太一样，再经过几轮询问 ai，最终将拿到的数据转换一下结构，成功得到了雷达图。
 
 注意：如果反复询问 ai ，都不能排错，这时建议换个方向问会有奇效，有时候甚至需要完全推翻重来。
 
-![](https://danyueqingyun.feishu.cn/space/api/box/stream/download/asynccode/?code=NmVkNmQxOTg0NmMwMjUyNjI2ZjkzOWU3NWEzYzU5MDVfZXVrWUZoa0dPUklGVk8xWnFlc1dLTzhTbGlmb1Jyc0pfVG9rZW46VWhJemJFMTBJb0lvaEx4S2I0Y2NtamxmbkZlXzE3MjQ5MDc5NTI6MTcyNDkxMTU1Ml9WNA)
+![图 11](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/6ed1441e5fa041c159ce0f9cb3379e2f77c2c6baead57136b27c171a6b056404.webp)  
+
 
 ### 源码
 
