@@ -4,7 +4,7 @@ title: TFL 文件处理器 - 用户手册
 tags:
   - Tableau
   - code
-description: 摘要：一款轻量级的桌面应用程序，旨在帮助用户快速、方便地从 Tableau 流程文件 (`.tfl`) 中提取核心的流程定义数据。
+description: 摘要：一款轻量级的桌面应用程序，旨在帮助用户快速、方便地从 Tableau 流程文件 (`.tfl`) 中提取核心的流程定义数据Json格式，方便进一步处理或者询问AI。
 ---
 
 
