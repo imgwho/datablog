@@ -191,21 +191,47 @@ h3 {
 }
 
 
-/* Optimize Home Page Display */
-/* Ensure home page content container takes full available width */
-html.vp-page-home .VPDoc.has-aside .content-container,
-html.vp-page-home .VPContent.is-home .container {
-    max-width: 100% !important; /* Adjust to a specific rem value if 100% is too wide, e.g., 90rem */
+/* Optimize Home Page Display - Attempt 2 */
+
+/* Ensure body on home page does not cause overflow */
+html.vp-page-home body {
+    overflow-x: hidden;
 }
 
-/* Force hide aside on home page if it exists in DOM */
+/* Main content area on home page */
+html.vp-page-home .VPContent.is-home {
+    overflow-x: hidden !important; /* Prevent internal content from causing horizontal scroll */
+}
+
+/* Ensure home page content container takes full available width and respects viewport */
+html.vp-page-home .VPContent.is-home .container {
+    max-width: 100vw !important; /* Use viewport width to avoid parent constraints */
+    padding-left: 1.5rem; /* Re-apply or adjust default padding if needed */
+    padding-right: 1.5rem; /* Re-apply or adjust default padding if needed */
+    box-sizing: border-box; /* Ensure padding doesn't add to max-width */
+}
+
+/* If VPDoc is still part of the home page structure and causing issues */
+html.vp-page-home .VPDoc {
+    overflow-x: hidden !important;
+}
+
+html.vp-page-home .VPDoc .content-container {
+     max-width: 100vw !important;
+     box-sizing: border-box;
+}
+
+/* Force hide aside on home page if it exists in DOM and contributes to layout issues */
 html.vp-page-home .VPDoc .aside {
     display: none !important;
 }
 
-/* Optional: Adjustments for default VPHome layout if features cause overflow or spacing issues */
+/* Optional: Adjustments for default VPHome layout if features cause overflow */
 html.vp-page-home .VPContent.is-home .VPFeatures {
-    /* Example: center features if they wrap and cause uneven spacing */
+    /* If features are too wide or wrap causing overflow, adjust their layout */
+    /* Example: max-width: 100%; box-sizing: border-box; */
     /* justify-content: center; */
 }
+
+
 
