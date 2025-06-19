@@ -190,3 +190,22 @@ h3 {
     color: var(--vp-c-text-1);
 }
 
+
+/* Optimize Home Page Display */
+/* Ensure home page content container takes full available width */
+html.vp-page-home .VPDoc.has-aside .content-container,
+html.vp-page-home .VPContent.is-home .container {
+    max-width: 100% !important; /* Adjust to a specific rem value if 100% is too wide, e.g., 90rem */
+}
+
+/* Force hide aside on home page if it exists in DOM */
+html.vp-page-home .VPDoc .aside {
+    display: none !important;
+}
+
+/* Optional: Adjustments for default VPHome layout if features cause overflow or spacing issues */
+html.vp-page-home .VPContent.is-home .VPFeatures {
+    /* Example: center features if they wrap and cause uneven spacing */
+    /* justify-content: center; */
+}
+
