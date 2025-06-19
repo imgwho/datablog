@@ -191,45 +191,6 @@ h3 {
 }
 
 
-/* Optimize Home Page Display - Attempt 3 */
-
-/* Prevent horizontal scroll on home page */
-html.vp-page-home,
-html.vp-page-home body {
-    overflow-x: clip !important;
-}
-
-/* Ensure home page content container takes full available width */
-html.vp-page-home .VPContent.is-home .container {
-    max-width: calc(100vw - 3rem) !important; /* Account for 1.5rem padding on each side */
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1.5rem; /* Default VitePress padding */
-    padding-right: 1.5rem; /* Default VitePress padding */
-    box-sizing: border-box;
-}
-
-/* Override general container width for home page specifically */
-html.vp-page-home .container {
-    max-width: calc(100vw - 3rem) !important;
-}
-
-/* If VPDoc structure is used on home page, ensure its content container also expands */
-html.vp-page-home .VPDoc .content-container {
-    max-width: 100% !important; /* Allow it to fill the parent .container */
-    padding-left: 0; /* Reset padding if parent .container handles it */
-    padding-right: 0; /* Reset padding if parent .container handles it */
-}
-
-/* Force hide aside on home page */
-html.vp-page-home .VPDoc .aside {
-    display: none !important;
-}
-
-/* Reset any specific max-width on the content itself if it's too restrictive */
-html.vp-page-home .VPDoc:not(.has-sidebar) .content {
-    max-width: 100% !important;
-}
 
 
 
