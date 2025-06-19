@@ -3,7 +3,7 @@ date: 2024-08-27
 title: tableau viz extension开发入门
 tags:
   - Tableau
-  - Code
+  - code
 description: 摘要：本教程主要参考官方帮助文档，并用一个实际开发案例展示Tableau 可视化扩展开发的过程。
 ---
 
