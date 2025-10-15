@@ -13,7 +13,6 @@ description: 摘要：本文主要介绍工作上的一个看板应用，用于�
 
 https://public.tableau.com/views/\_17605218961280/sheet0?:language=zh-CN&:sid=&:redirect=auth&:display\_count=n&:origin=viz\_share\_link
 
-![](images/image.png)
 
 ## 第一阶段：需求分析与规划
 
