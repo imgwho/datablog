@@ -9,8 +9,7 @@ description: 摘要：本文主要介绍工作上的一个看板应用，用于�
 
 
 
-[看板地址](https://public.tableau.com/views/\_17605218961280/sheet0?:language=zh-CN&:sid=&:redirect=auth&:display\_count=n&:origin=viz\_share\_link
-)
+[看板地址](https://public.tableau.com/views/_17605771075190/sheet0?:language=zh-CN&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 
 ## 第一阶段：需求分析与规划
