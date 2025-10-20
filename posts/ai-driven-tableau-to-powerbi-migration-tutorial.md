@@ -29,10 +29,10 @@ description: 摘要：本文是一篇详细的复盘教程，记录了如何通�
 我们的任务是将一个经典的 Tableau "Superstore" 销售看板，迁移到 Power BI 中。
 
 **原始 Tableau 看板:**
-![Tableau Superstore Dashboard](https://i.imgur.com/7s1bJ9b.jpg)
+![Tableau Superstore Dashboard](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/tableau%20superstore.jpg)
 
 **最终 Power BI 成果:**
-![Power BI Superstore Dashboard](https://i.imgur.com/kP1oR4h.jpg)
+![Power BI Superstore Dashboard](https://pub-833348ee5761457dbfac749bcd651384.r2.dev/datablog/powerbi%20superstore.jpg)
 
 这个看板看似简单，但五脏俱全，涵盖了 BI 看板的核心元素：
 - **KPI 指标卡**：7 个核心业务指标。
