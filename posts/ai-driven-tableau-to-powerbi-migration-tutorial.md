@@ -1,6 +1,6 @@
 ---
 date: 2025-10-19
-title: 如何无需代码用 AI，将 Tableau 看板转为 Power BI 
+title: 如何用 AI 将 Tableau 看板转为 Power BI 看板
 tags:
   - Power BI
   - Tableau
@@ -8,7 +8,7 @@ tags:
 description: 摘要：本文是一篇详细的复盘教程，记录了如何通过与 AI 编程助手协作，将一个完整的 Tableau 看板迁移到 Power BI 的全过程。文章重点展示了在不手写任何代码的情况下，如何指挥 AI 分析需求、生成 .pbip 项目源码、并协同调试，最终实现报表的完美复刻。这不仅是一个 BI 迁移案例，更是对“BI 即代码”（BI as Code）和未来 AI 驱动开发模式的一次深度探索。
 ---
 
-# 告别拖拉拽：我如何指挥 AI，将一个 Tableau 看板完整“翻译”为 Power BI 源码
+# 我如何指挥 AI，将一个 Tableau 看板完整“翻译”为 Power BI 看板
 
 ## 前言：当 BI 开发遇上“代码时代”
 
