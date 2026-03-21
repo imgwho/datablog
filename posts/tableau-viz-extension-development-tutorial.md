@@ -568,7 +568,7 @@ connectedScatterplot.trex, connectedScatterplot.html, connectedScatterplot.js 3�
 
 -remote-debugging-port=8696
 
-![!\[\](https://test.fukit.cn/autoupload/fr/0_t9wiexkQUJgxmAHQTunrintPjJuw3h5laAoIB3PNqyl5f0KlZfm6UsKj-HyTuv/20260321/eR8f/480X648/v2-6c084c9bb6d41019e4da55afb7f8d768_1440w.png/webp)
+![图 4](https://test.fukit.cn/autoupload/fr/0_t9wiexkQUJgxmAHQTunrintPjJuw3h5laAoIB3PNqyl5f0KlZfm6UsKj-HyTuv/20260321/eR8f/480X648/v2-6c084c9bb6d41019e4da55afb7f8d768_1440w.png/webp)
 
 在标记工具栏，添加扩展程序，然后选择本地扩展，打开我们刚才编写的扩展
 
